@@ -8,7 +8,7 @@
 - [API Reference](#Reference)
 - [Installation](#Installation)
 
-# Usage
+## Usage
 
 > Before making use of ReactiveTimelane, you need to install the Timelane Instrument from http://timelane.tools
 
@@ -30,9 +30,9 @@ Then profile your project by clicking **Product > Profile** in Xcode's main menu
 
 For a more detailed walkthrough go to [http://timelane.tools](http://timelane.tools).
 
-# API Reference
+## API Reference
 
-## `lane(_:filter:)`
+### `lane(_:filter:)`
 
 Use `lane("Lane name")` to send data to both the subscriptions and events lanes in the Timelane Instrument.
 
@@ -46,9 +46,9 @@ Additionally you can transform the values logged in Timelane by using the option
 lane("Lane name", transformValue: { "Value: \($0)" })
 ```
 
-# Installation
+## Installation
 
-## Swift Package Manager
+### Swift Package Manager
 
 #### Automatically in Xcode:
 
