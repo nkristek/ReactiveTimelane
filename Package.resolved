@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "3f4351d04115fd8797802d9b2d17b812cd761602",
+          "version": "6.3.0"
+        }
+      },
+      {
+        "package": "TimelaneCore",
+        "repositoryURL": "https://github.com/icanzilb/TimelaneCore",
+        "state": {
+          "branch": null,
+          "revision": "343792b6960f0bec2c7a8a84a4027506eddaf440",
+          "version": "1.0.10"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
