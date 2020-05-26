@@ -50,12 +50,12 @@ lane("Lane name", transformValue: { "Value: \($0)" })
 
 ## Swift Package Manager
 
-I . Automatically in Xcode:
+#### Automatically in Xcode:
 
 - Click **File > Swift Packages > Add Package Dependency...**  
 - Use the package URL `https://github.com/nkristek/ReactiveTimelane` to add ReactiveTimelane to your project.
 
-II . Manually in your **Package.swift** file add:
+#### Manually in your `Package.swift` file:
 
 ```swift
 .package(url: "https://github.com/nkristek/ReactiveTimelane", from: "1.0.0")
