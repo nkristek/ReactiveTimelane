@@ -1,4 +1,5 @@
 # ReactiveTimelane
+[![CI Status](https://github.com/nkristek/ReactiveTimelane/workflows/CI/badge.svg)](https://github.com/nkristek/ReactiveTimelane/actions)
 
 **ReactiveTimelane** provides operators for `Signal` and `SignalProducer` in [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) for profiling ReactiveSwift code with the Timelane Instrument.
 
@@ -60,3 +61,7 @@ lane("Lane name", transformValue: { "Value: \($0)" })
 ```swift
 .package(url: "https://github.com/nkristek/ReactiveTimelane", from: "1.0.0")
 ```
+
+## Contribution
+
+If you find a bug feel free to open an issue. Contributions are also appreciated.
