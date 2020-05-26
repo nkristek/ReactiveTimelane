@@ -7,8 +7,6 @@
 - [Usage](#Usage)
 - [API Reference](#Reference)
 - [Installation](#Installation)
-- [Demo](#Demo)
-- [License](#License)
 
 # Usage
 
