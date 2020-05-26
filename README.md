@@ -5,9 +5,10 @@
 
 #### Contents:
 
-- [Usage](#Usage)
-- [API Reference](#Reference)
-- [Installation](#Installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Installation](#installation)
+- [Contribution](#contribution)
 
 ## Usage
 
