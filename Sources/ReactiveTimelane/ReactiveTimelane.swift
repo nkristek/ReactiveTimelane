@@ -2,8 +2,6 @@ import Foundation
 import ReactiveSwift
 import TimelaneCore
 
-fileprivate let lock = NSLock()
-
 @available(macOS 10.14, iOS 12, tvOS 12, watchOS 5, *)
 public extension Signal {
     /// The `lane` operator logs the subscription and its events to the Timelane Instrument.
@@ -27,18 +25,13 @@ public extension Signal {
         let fileName = file.description.components(separatedBy: "/").last!
         let source = "\(fileName):\(line) - \(function)"
         let subscription = Timelane.Subscription(name: name, logger: logger)
-        
+
         if filter.contains(.subscription) {
-            lock.lock()
             subscription.begin(source: source)
-            lock.unlock()
         }
-        
+
         return on(
             failed: { error in
-                lock.lock()
-                defer { lock.unlock() }
-                
                 if filter.contains(.subscription) {
                     subscription.end(state: .error(error.localizedDescription))
                 }
@@ -47,9 +40,6 @@ public extension Signal {
                     subscription.event(value: .error(error.localizedDescription), source: source)
                 }
         }, completed: {
-            lock.lock()
-            defer { lock.unlock() }
-            
             if filter.contains(.subscription) {
                 subscription.end(state: .completed)
             }
@@ -58,9 +48,6 @@ public extension Signal {
                 subscription.event(value: .completion, source: source)
             }
         }, interrupted: {
-            lock.lock()
-            defer { lock.unlock() }
-            
             if filter.contains(.subscription) {
                 subscription.end(state: .cancelled)
             }
@@ -69,9 +56,6 @@ public extension Signal {
                 subscription.event(value: .cancelled, source: source)
             }
         }, value: { value in
-            lock.lock()
-            defer { lock.unlock() }
-            
             if filter.contains(.event) {
                 subscription.event(value: .value(transform(value)), source: source)
             }
