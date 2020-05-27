@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "72f5a90d573f7f7d70aa6b8ad84b3e1e02eabb4d",
+          "version": "8.0.9"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
+        "state": {
+          "branch": null,
+          "revision": "33682c2f6230c60614861dfc61df267e11a1602f",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "ReactiveCocoa",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveCocoa",
+        "state": {
+          "branch": null,
+          "revision": "8be399d8df3ca96e54f94c2a5091ce07c2cfe93c",
+          "version": "10.3.0"
+        }
+      },
+      {
+        "package": "ReactiveSwift",
+        "repositoryURL": "https://github.com/ReactiveCocoa/ReactiveSwift",
+        "state": {
+          "branch": null,
+          "revision": "3f4351d04115fd8797802d9b2d17b812cd761602",
+          "version": "6.3.0"
+        }
+      },
+      {
+        "package": "ReactiveTimelane",
+        "repositoryURL": "https://github.com/nkristek/ReactiveTimelane",
+        "state": {
+          "branch": null,
+          "revision": "3882e77ca7d0a6d0947b25cba02ae6658a5ec7b1",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "TimelaneCore",
+        "repositoryURL": "https://github.com/icanzilb/TimelaneCore",
+        "state": {
+          "branch": null,
+          "revision": "343792b6960f0bec2c7a8a84a4027506eddaf440",
+          "version": "1.0.10"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
