@@ -1,7 +1,7 @@
 # ReactiveTimelane
 [![CI Status](https://github.com/nkristek/ReactiveTimelane/workflows/CI/badge.svg)](https://github.com/nkristek/ReactiveTimelane/actions)
 
-**ReactiveTimelane** provides operators for `Signal` and `SignalProducer` in [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) for profiling streams with the Timelane Instrument.
+**ReactiveTimelane** provides operators for `Signal`, `SignalProducer` and `Lifetime` in [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) for profiling streams and lifetimes with the Timelane Instrument.
 
 #### Contents:
 
