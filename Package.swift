@@ -14,8 +14,13 @@ let package = Package(
         .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift.git", from: "6.3.0")
     ],
     targets: [
-        .target( name: "ReactiveTimelane", dependencies: ["ReactiveSwift", "TimelaneCore"]),
-        .testTarget( name: "ReactiveTimelaneTests", dependencies: ["ReactiveTimelane", "ReactiveSwift"]),
+        .target(name: "ReactiveTimelane",
+                dependencies: ["ReactiveSwift", "TimelaneCore"]),
+        .testTarget(name: "ReactiveTimelaneTests",
+                    dependencies: [
+                        "ReactiveTimelane",
+                        "ReactiveSwift",
+                        .product(name: "TimelaneCoreTestUtils", package: "TimelaneCore")]),
     ],
     swiftLanguageVersions: [.v5]
 )
