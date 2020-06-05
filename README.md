@@ -23,8 +23,9 @@ import ReactiveTimelane
 Use the `lane(_:)` operator to profile a subscription via the TimelaneInstrument. Insert `lane(_:)` at the precise spot in your code you'd like to profile like so:
 
 ```swift
-downloadImage(at: url)
-    .lane("Download: \(url.path)")
+let producer: SignalProducer<Void, Never> = SignalProducer(value: ())
+producer
+    .lane("Void producer")
     .start()
 ```
 
@@ -38,14 +39,14 @@ For a more detailed walkthrough go to [http://timelane.tools](http://timelane.to
 
 Use `lane("Lane name")` to send data to both the subscriptions and events lanes in the Timelane Instrument.
 
-`lane("Lane name", filter: .subscription)` sends begin/completion events to the Subscriptions lane. Use this syntax if you only want to observe concurrent subscriptions.
+`lane("Lane name", filter: .subscription)` sends begin/completion events to the Subscriptions lane. Use this syntax if you only want to observe the lifetime of the `Signal` / `SignalProducer`.
 
-`lane("Lane name", filter: .event)` sends events and values to the Events lane. Use this filter if you are only interested in values a subscription would emit (e.g. for example subjects).
+`lane("Lane name", filter: .event)` sends events and values to the Events lane. Use this filter if you are only interested in the values the `Signal` / `SignalProducer` emits.
 
 Additionally you can transform the values logged in Timelane by using the optional `transformValue` trailing closure:
 
 ```swift
-lane("Lane name", transformValue: { "Value: \($0)" })
+lane("Lane name", transformValue: { "Value is \($0)" })
 ```
 
 ## Installation
@@ -60,7 +61,7 @@ lane("Lane name", transformValue: { "Value: \($0)" })
 #### Manually in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/nkristek/ReactiveTimelane", from: "1.0.0")
+.package(url: "https://github.com/nkristek/ReactiveTimelane", from: "1.1.0")
 ```
 
 ## Contribution
